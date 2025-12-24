@@ -37,6 +37,8 @@ public class Page182To183 {
 		}
 		
 		// Q5 : ㄴ 삼각형
+		// 1) 4 줄을 출력하는 부분을 담당하는 for 문 처리
+		// 2) 1 줄을 구성하는 부분을 담당하는 처리
 		for (int i = 0; i < 5; i++) {
 			String str = "";
 			for (int j = 5-(5-i); j > 0; j--) {				
@@ -44,6 +46,22 @@ public class Page182To183 {
 			}
 			System.out.println(str);
 		}
+		System.out.println("--------------------------------------");
+		
+		// 문자열의 재배치를 구현하기위해 작성할 문자열이아닌 공백을 주로 작성함
+		for (int i = 1; i <= 4; i++) { // i = '*'의 갯수
+			String str = "";
+			for (int j = 4; j > 0; j--) {
+				if (j > i) {
+					str += " ";
+				}
+				else {
+					str += "*";
+				}
+			}
+			System.out.println(str);
+		}
+		
 		System.out.println("--------------------------------------");
 		// Q6 : 역ㄴ 삼각형
 		for (int i = 0; i < 4; i++) {
