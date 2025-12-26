@@ -33,16 +33,16 @@ public class Q6 {
 				}
 			} else if (selectNo == 4) {
 				int max = scores[0];
-				double avg = 0;
+				double sum = 0;
 				for (int i = 0; i < scores.length; i++) {
 					if (max <= scores[i]) {
 						max = scores[i];
 					}
-					avg += scores[i];
+					sum += scores[i]; // 변수를 다루는 방식과 명칭이 최종결과에 종속되는것이아니라 변수를 다루는 과정에 의미가 있어야 한다.
 				}
-				avg /= (double)scores.length;
+				sum /= (double)scores.length;
 				System.out.println("최고 점수: "+max);
-				System.out.println("평균 점수: "+avg);
+				System.out.println("평균 점수: "+sum/(double)scores.length);
 			} else if (selectNo == 5) {
 				run = false;
 			} 
