@@ -24,9 +24,15 @@ public class CommonExample {
 		// 원하는 형태로 가공하거나 필터링할 수 있는 기능을 제공
 		// Stream API로 연속적인 연산이가능 해당변수를통해 연속적으로 가지고올수있는 공간을 만든다.
 		// Lambda 식을통해서 데이터를 가공
+		// 짝수만가져왔는데 이거어떻게반환할거냐, filter 를 통해 반환받은 결과를 최종 형태(List Collection)으로 반환하겠다.
+		
+		// stream 메서드를 호출하는 순간 API를 사용 할 수 있게된다 == stream을 연다.
 		List<Integer> evenNumbers = numbers.stream()
-				.filter(n -> n%2 == 0)
-				.collect(Collectors.toList());
+				.filter(n -> n%2 == 0) // 중간 연산(여러개를 순차적으로 진행하는것이 가능 하다.)
+				//.max(Math::max); // 중간연산에서 가져온 짝수중 최종값 하나만 반환하겠다.
+				.collect(Collectors.toList()); // 최종 연산, 반환하는 형태를 결정 
+		
+		// 람다식 중 메서드 참조 :
 		evenNumbers.stream().forEach(System.out::println);
 		
 

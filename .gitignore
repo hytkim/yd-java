@@ -2,3 +2,6 @@
 .classpath
 bin/
 .settings/
+
+db.properties
+*.properties
